@@ -1,0 +1,219 @@
+#root {
+  //max-width: 99w;
+  margin: 0 auto;
+  //padding: 2rem;
+  text-align: center;
+}
+
+/* Home */
+.home-container {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+
+  .buttons-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+  }
+}
+
+/* Rive Loader */
+.rive-container {
+  width: 100%;
+  height: 100%;
+}
+
+.rive-component {
+  margin: 0 auto;
+  width: 500px;
+  height: 500px;
+}
+
+/* Rive Hero */
+.hero-container {
+  width: 100vw;
+  overflow-x: hidden;
+}
+.rive-hero-container {
+  margin-top: 0;
+  width: 99vw;
+}
+.rive-hero-canvas {
+  width: 99vw;
+  max-width: 1920px;
+  height: calc(100vw * 1.54);
+}
+
+/* RIVE HERO CSS */
+.long-definition-section {
+  transition: opacity 2s ease-in-out;
+  &.no-show{
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+  }
+  position: absolute;
+  top: 1700px;
+  @media (max-width: 1700px) {
+    top: 1500px;
+  }
+  @media (max-width: 1500px) {
+    top: 1300px;
+  }
+  @media (max-width: 1299px) {
+    top: 1200px;
+  }
+  @media (max-width: 1199px) {
+    top: 1100px;
+  }
+  @media (max-width: 1099px) {
+    top: 1000px;
+  }
+  @media (max-width: 999px) {
+    top: 900px;
+  }
+  margin: 0 auto;
+  width: 100%;
+  .long-definition {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 1000px;
+    margin: 0 auto;
+
+    .long-definition-text{
+      width: 1000px;
+      text-align: center;
+      font-family: 'IBMPlexMono', sans-serif;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      opacity: 0.9;
+
+      italic {
+        font-family: 'RobotoSerif', sans-serif;
+        font-weight: 500;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+/* Rive Form */
+.divider {
+  height: 400px;
+  width: 1px;
+  background-color: #888;
+}
+.form-page-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 4em;
+  align-items: center;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 1em;
+    justify-content: space-between;
+    .input-container {
+      input {
+        width: 250px;
+      }
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      border-radius: 8px;
+      width: 300px;
+      border: 1px solid transparent;
+      padding: 0.6em 1.2em;
+      font-size: 1em;
+      font-weight: 500;
+      font-family: inherit;
+      background-color: #1a1a1a;
+      cursor: pointer;
+      transition: border-color 0.25s;
+    }
+
+
+  }
+
+}
+.rive-form-canvas {
+  width: 195px;
+  height: 285px;
+}
+
+.visible {
+  /* -webkit-animation: fadein 0.5s linear forwards;
+  animation: fadein 0.5s linear forwards; */
+  display: flex !important;
+}
+
+.invisible {
+  /* -webkit-animation: fadeout 0.5s linear forwards;
+  animation: fadeout 0.5s linear forwards; */
+  display: none !important;
+}
+
+.logos-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+}
+
+.logo {
+  height: auto;
+  max-width: 76px;
+  width: 76px;
+  padding: 2em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #ff6490aa);
+}
+.logo.hakuna:hover {
+  filter: drop-shadow(0 0 2em #95ff64aa);
+}
+
+.times {
+  font-size: 24px;
+  color:#888;
+}
+
+/* @keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+/* @media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+} */
+
+.card {
+  padding: 2em;
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+.read-the-docs {
+  color: #888;
+}
