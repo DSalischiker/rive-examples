@@ -5,6 +5,7 @@ import './index.css'
 import {
   createBrowserRouter,
   RouterProvider,
+  Link
 } from "react-router-dom";
 
 import riveLogo from '/rive.svg';
@@ -31,10 +32,10 @@ const router = createBrowserRouter([
         <h1>Rive x Hakuna</h1>
         {/* <h2>Hakuna's Rive Examples!</h2> */}
         <div className="buttons-container">
-          <a href="/form"><button>Form</button></a>
-          <a href="/hero"><button>Hero</button></a>
-          <a href="/loader"><button>Loader</button></a>
-          <a href="/chart"><button>Chart</button></a>
+          <Link className="link" to="/form">Form</Link>
+          <Link className="link" to="/hero">Hero</Link>
+          <Link className="link" to="/loader">Loader</Link>
+          {/* <Link to="/chart" disabled>Chart</Link> */}
         </div>
 
         <p className="read-the-docs">
