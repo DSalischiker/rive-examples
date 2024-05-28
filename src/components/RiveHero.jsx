@@ -1,5 +1,4 @@
 import {useState, useEffect, useRef} from 'react';
-import Rive from '@rive-app/react-canvas';
 import { useRive, useStateMachineInput } from '@rive-app/react-canvas';
 
 //import riveFile from '../rive/eclipse_demo_3.riv';

@@ -4,54 +4,29 @@ import { useRive, useRiveStateMachineInput, useStateMachineInput } from "@rive-a
 
 
 const RiveLoader = () => {
-
-    const [start, useStart] = useState(false);
-    const [loading, useLoading] = useState(0);
+    /* Inputs in React State */
+    
 
     /* Rive Hooks */
-    /* Rive Component */
-    const { rive, RiveComponent } = useRive({
-        src: "/haku_loader.riv",
-        stateMachines: "State Machine 1",
-        autoplay: true,
-    })
-
-    /* Rive inputs */
-    const startInput = useStateMachineInput(
-        rive,
-        "State Machine 1",
-        "Start",
-        false
-    );
+    /* useRive */
     
-    const loadingInput = useStateMachineInput(
-        rive,
-        "State Machine 1",
-        "Loading",
-        0
-    );
+    
+
+    /* useStateMachineInput */
+    
 
     /* Effects para setear valores de Inputs Rive */
-    useEffect(() => {
-        if (rive && startInput) {
-            startInput.value = start;
-        }
-    }, [start])
-
-    useEffect(() => {
-        if (rive && loadingInput) {
-            loadingInput.value = loading;
-        }
-    }, [loading])
+    
 
     return(
         <div>
             <h1>Rive Loader example</h1>
             
             <div className="rive-container">
-                <RiveComponent className="rive-component" /> {/* Este componente renderiza rive en un <canvas> */}
+                {/* RiveComponent */}
             </div>
             
+            {/* UI para interactuar con los inputs que espera Rive */}
             <div className="card">
                 <button onClick={() => useStart(!start)}>
                     {!start ? 'Start' : 'Stop'}

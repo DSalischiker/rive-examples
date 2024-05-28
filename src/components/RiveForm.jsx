@@ -1,9 +1,6 @@
 import {useState, useEffect, useRef} from 'react';
 import { useFormik } from 'formik';
-import Rive from '@rive-app/react-canvas';
 import { useRive, useStateMachineInput } from '@rive-app/react-canvas';
-
-//import riveFile from '../rive/eclipse_demo_3.riv';
 
 const validate = values => {
   const errors = {};
@@ -54,7 +51,6 @@ export default function ContactForm() {
   });
 
   const submissionSuccess = (values) => {
-    console.log("SUCCESS");
     if (rive && successInput) {
       successInput.value = true;
     }
@@ -64,7 +60,6 @@ export default function ContactForm() {
   }
 
   const submissionError = (values) => {
-    console.log("ERROR");
     if (errorInput && rive) {
       errorInput.value = true;
     }
@@ -89,10 +84,6 @@ export default function ContactForm() {
   const [formSent, setFormSent] = useState(false);
   const [formValidated, setFormValidated] = useState(false);
 
-  /* useEffect(() => {
-    console.log('errors', formik.errors);
-  }, [formik.errors]); */
-
   /* UseEffect to check how many fields have been completed */
   useEffect(() => {
     const countNonEmptyFields = () => {
@@ -116,14 +107,11 @@ export default function ContactForm() {
         formContainerBorderRef.current.classList.remove("error");
       }
     } */
-
-    console.log('values', formik.values);
   }, [formik.values]);
 
   /* UseEffect to change Rive inputs */
   useEffect(() => {
     if (fieldsCompleted === 1) {
-      console.log("Start")
       if (startInput && rive) {
         /* START FLOW */
         startInput.value = true;
@@ -136,6 +124,7 @@ export default function ContactForm() {
         }
       } else if(fieldsCompleted < 3) {
         if (processInput && rive) {
+          /* STARTED BUT NOT DONE */
           processInput.value = fieldsCompleted;
         }
       }
